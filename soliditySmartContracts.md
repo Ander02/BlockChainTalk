@@ -249,6 +249,26 @@ Exemplo de declaração de Version Pragma
 	>int v = addressToInt[0x527306090abaC3A6e1400e9345bC60c78a8BEf57];
 	>~~~
 
+##Unidades de Medida
+
+* Soldity tem algumas unidades de medida para alguns valores, dentre elas unidades de Ether e de Tempo
+* São aplicadas com sufixos após os valores
+
+###Ether
+* **ether**: Equivale a 1 ether
+* **finney**: 1 ether equivale a  1000 (10^3) finney 
+* **szabo**: 1 ether equivale a 1000000 (10^6) szabo
+* **wei**: Menor unidade de divisão de ether, onde um ether equivale a 1000000000000000000 (10^18) wei
+* **default(vazio)**: Um valor utilizado como ether e que não tem unidade definida é por padrão wei.
+
+###Tempo
+* **second**: 1 segundo == 1 segundo
+* **minutes**: 1 minutes == 60 seconds
+* **hours**: 1 hours == 60 minutes
+* **days**: 1 days == 24 hours
+* **weeks**: 1 weeks == 7 days
+* **years**: 1 years == 365 days
+
 ##Functions
 
 * Permitem encapsular a lógica do contrato
@@ -654,4 +674,5 @@ Exemplo de declaração de Version Pragma
 
 * Utilizar tamanhos menores de variáveis como **int32**, **int64** não faz diferença para os custos em gás, a não ser que se esteja em uma **struct**
 * Agrupar tipos iguais nas estruturas também facilita na economização de gas
+* Funções do tipo view e pure, isto é, que não fazem alterações na blockchain, não consomem gas, a não ser que sejam usadas por outra função que faça algum tipo de alteração
 
